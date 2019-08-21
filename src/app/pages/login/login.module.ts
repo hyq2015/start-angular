@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
 import {LoginComponent} from './login.component';
+import {CommonUsageModule} from '../../common/common-usage.module';
 const loginRoutes: Routes = [
   {
     path: '',
@@ -12,7 +12,7 @@ const loginRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
+    CommonUsageModule,
     RouterModule.forChild(loginRoutes)
   ],
   declarations: [LoginComponent],

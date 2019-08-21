@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ProductComponent} from './product.component';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
-import {AuthGuard} from '../../auth/auth.guard';
+import {AuthGuard} from '../../service/auth.guard';
+import {CommonUsageModule} from '../../common/common-usage.module';
 const productRoutes: Routes = [
   {
     path: '',
@@ -14,7 +14,7 @@ const productRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
+    CommonUsageModule,
     RouterModule.forChild(productRoutes)
   ],
   declarations: [ProductComponent],

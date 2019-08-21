@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {AuthService} from '../../auth/auth.service';
+import {AuthService} from '../../service/auth.service';
+import {LangService} from '../../service/lang.service';
 
 @Component({
   selector: 'app-nav',
@@ -10,7 +11,8 @@ import {AuthService} from '../../auth/auth.service';
 export class NavComponent implements OnInit {
 
   @Input() isLoggedIn: boolean;
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService, private langService: LangService) {
+  }
 
   ngOnInit() {
   }

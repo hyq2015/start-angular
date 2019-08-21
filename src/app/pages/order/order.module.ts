@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {OrderComponent} from './order.component';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
-import {AuthGuard} from '../../auth/auth.guard';
+import {AuthGuard} from '../../service/auth.guard';
 import {OrderDetailComponent} from './detail/detail.component';
+import {CommonUsageModule} from '../../common/common-usage.module';
 const orderRoutes: Routes = [
   {
     path: '',
@@ -22,7 +22,7 @@ const orderRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
+    CommonUsageModule,
     RouterModule.forChild(orderRoutes)
   ],
   declarations: [OrderComponent, OrderDetailComponent],

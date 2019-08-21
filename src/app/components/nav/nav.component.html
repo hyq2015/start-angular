@@ -1,10 +1,10 @@
 <nav *ngIf="isLoggedIn">
   <ul>
-    <li (click)="onNav('')">home</li>
-    <li (click)="onNav('product')">product</li>
-    <li (click)="onNav('order')">order</li>
-    <li (click)="onNav('order/detail')">order detail</li>
-    <li (click)="onNav('test')">test</li>
-    <li (click)="onLogOut()">log out</li>
+    <li (click)="onNav('')">{{langService.langKey.home | translate:langService.lang}}</li>
+    <li (click)="onNav('product')">{{langService.langKey.productList | translate:langService.lang}}</li>
+    <li (click)="onNav('order')">{{langService.langKey.orderList | translate:langService.lang}}</li>
+    <li (click)="onNav('order/detail')">{{langService.langKey.orderDetail | translate:langService.lang}}</li>
+    <li (click)="onNav('test')">{{langService.langKey.test | translate:langService.lang}}</li>
+    <li (click)="onLogOut()">{{langService.langKey.logout | translate:langService.lang}}</li>
   </ul>
 </nav>
