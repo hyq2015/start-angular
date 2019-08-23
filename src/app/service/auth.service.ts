@@ -29,6 +29,7 @@ export class AuthService{
   }
   logOut(): void {
     sessionStorage.removeItem('user');
+    sessionStorage.removeItem('currentPage');
     this.isLoggedIn = false;
     this.loginStateChange.next(false);
     this.router.navigateByUrl('login', {skipLocationChange: true});
