@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes} from '@angular/router';
 import {ProductComponent} from './product.component';
 import {CommonModule} from '@angular/common';
 import {AuthGuard} from '../../service/auth.guard';
@@ -17,7 +17,10 @@ const productRoutes: Routes = [
     CommonUsageModule,
     RouterModule.forChild(productRoutes)
   ],
-  declarations: [ProductComponent],
-  exports: [RouterModule]
+  declarations: [
+    ProductComponent
+  ],
+  exports: [RouterModule],
+  providers: []
 })
 export class ProductModule {}

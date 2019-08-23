@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {ProductComponent} from './pages/product/product.component';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./pages/home/home.module').then(mod => mod.HomeModule)
-  },
-  {
     path: 'product',
+    // component: ProductComponent
     loadChildren: () => import('./pages/product/product.module').then(mod => mod.ProductModule)
   },
   {
@@ -21,6 +19,10 @@ const routes: Routes = [
   {
     path: '404',
     loadChildren: () => import('./pages/notfound/notfound.module').then(mod => mod.NotFoundModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./pages/home/home.module').then(mod => mod.HomeModule)
   },
   {
     path: '**',

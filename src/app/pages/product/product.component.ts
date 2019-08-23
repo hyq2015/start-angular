@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  ActivatedRoute,
+  ActivatedRouteSnapshot, NavigationEnd,
+  RouteConfigLoadEnd,
+  RouteConfigLoadStart,
+  Router
+} from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -6,10 +13,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
+  public snapshot: ActivatedRouteSnapshot;
 
-  constructor() { }
+  constructor(private activeRoute: ActivatedRoute) {
+  }
 
   ngOnInit() {
+
+    // this.activeRoute.url.subscribe(res=>{
+    //   console.log(res);
+    // })
   }
 
 }

@@ -10,13 +10,13 @@ const orderRoutes: Routes = [
     path: '',
     component: OrderComponent,
     canActivate: [AuthGuard],
-    canActivateChild: [AuthGuard],
-    children: [
-      {
-        path: 'detail',
-        component: OrderDetailComponent,
-      }
-    ]
+    // canActivateChild: [AuthGuard],
+    // children: [
+    //   {
+    //     path: 'detail',
+    //     component: OrderDetailComponent,
+    //   }
+    // ]
   }
 ];
 @NgModule({
@@ -26,6 +26,6 @@ const orderRoutes: Routes = [
     RouterModule.forChild(orderRoutes)
   ],
   declarations: [OrderComponent, OrderDetailComponent],
-  exports: [RouterModule]
+  // exports: [RouterModule]
 })
 export class OrderModule {}

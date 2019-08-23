@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {AuthService} from './service/auth.service';
 
 @Component({
@@ -10,7 +10,7 @@ import {AuthService} from './service/auth.service';
 export class AppComponent implements OnInit{
   title = 'september-app';
   isLoggedIn = this.authService.isLoggedIn;
-  constructor(private router: Router, private authService: AuthService) {
+  constructor(private activeRoute: ActivatedRoute,private router: Router, private authService: AuthService) {
 
   }
   ngOnInit(): void {
@@ -18,10 +18,7 @@ export class AppComponent implements OnInit{
       next: res => {
         this.isLoggedIn = res;
       }
-    })
-  }
-  onNav(link) {
-    this.router.navigateByUrl(link);
+    });
   }
   onLogOut() {
     this.authService.logOut();

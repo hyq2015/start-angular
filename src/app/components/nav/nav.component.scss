@@ -1,0 +1,13 @@
+.nav-ul{
+  li{
+    border: none;
+    list-style: none;
+    &:active{
+      border: none;
+    }
+  }
+  .active{
+    background-color: blue;
+    color: #fff;
+  }
+}

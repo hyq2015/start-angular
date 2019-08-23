@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   }
   onLogin() {
     this.authService.login().subscribe(res => {
-      this.router.navigateByUrl(this.authService.redirectUrl);
+      this.router.navigateByUrl(this.authService.redirectUrl, {skipLocationChange: true});
       this.authService.redirectUrl = '';
     })
   }

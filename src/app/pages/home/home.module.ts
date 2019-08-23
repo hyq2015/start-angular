@@ -6,7 +6,7 @@ import {AuthGuard} from '../../service/auth.guard';
 import {CommonUsageModule} from '../../common/common-usage.module';
 const homeRoutes: Routes = [
   {
-    path: '',
+    path: '/',
     component: HomeComponent,
     canActivate: [AuthGuard]
   }
