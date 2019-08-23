@@ -1,11 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  ActivatedRoute,
-  ActivatedRouteSnapshot, NavigationEnd,
-  RouteConfigLoadEnd,
-  RouteConfigLoadStart,
-  Router
-} from '@angular/router';
+import {LangService} from '../../service/lang.service';
 
 @Component({
   selector: 'app-product',
@@ -13,16 +7,13 @@ import {
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  public snapshot: ActivatedRouteSnapshot;
 
-  constructor(private activeRoute: ActivatedRoute) {
+  constructor(private langService: LangService) {
   }
 
   ngOnInit() {
 
-    // this.activeRoute.url.subscribe(res=>{
-    //   console.log(res);
-    // })
+
   }
 
 }

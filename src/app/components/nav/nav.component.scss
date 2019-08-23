@@ -1,7 +1,9 @@
 .nav-ul{
+  display: inline-block;
   li{
     border: none;
     list-style: none;
+    cursor: pointer;
     &:active{
       border: none;
     }

@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ProductComponent} from './pages/product/product.component';
 
 const routes: Routes = [
   {
     path: 'product',
-    // component: ProductComponent
     loadChildren: () => import('./pages/product/product.module').then(mod => mod.ProductModule)
   },
   {

@@ -20,6 +20,7 @@ export class AuthGuard implements CanActivate, CanActivateChild{
     if (sessionStorage.getItem('user')) {
       return true;
     }
+    console.log('权限校验======', url);
     this.authService.redirectUrl = url;
     this.router.navigateByUrl('login', {skipLocationChange: true});
     return false;

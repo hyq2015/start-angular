@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {LangService} from '../../service/lang.service';
 
 @Component({
   selector: 'app-order',
@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
 })
 export class OrderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private langService: LangService) { }
 
   ngOnInit() {
   }

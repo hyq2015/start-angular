@@ -11,10 +11,6 @@
     "en": "order list",
     "zh-cn": "订单列表"
   },
-  "orderDetail": {
-    "en": "order detail",
-    "zh-cn": "订单详情"
-  },
   "test": {
     "en": "test",
     "zh-cn": "测试"
@@ -22,5 +18,9 @@
   "logout": {
     "en": "logout",
     "zh-cn": "登出"
+  },
+  "login": {
+    "en": "login",
+    "zh-cn": "登录"
   }
 }

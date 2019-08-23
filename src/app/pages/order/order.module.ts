@@ -9,14 +9,7 @@ const orderRoutes: Routes = [
   {
     path: '',
     component: OrderComponent,
-    canActivate: [AuthGuard],
-    // canActivateChild: [AuthGuard],
-    // children: [
-    //   {
-    //     path: 'detail',
-    //     component: OrderDetailComponent,
-    //   }
-    // ]
+    canActivate: [AuthGuard]
   }
 ];
 @NgModule({
