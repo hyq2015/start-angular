@@ -1,9 +1,12 @@
-<nav *ngIf="isLoggedIn">
-  <ul class="nav-ul">
-    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="" [skipLocationChange]="skipLocationChange">{{langService.langKey.home | translate:langService.lang}}</li>
-    <li routerLinkActive="active" routerLink="/product" [skipLocationChange]="skipLocationChange">{{langService.langKey.productList | translate:langService.lang}}</li>
-    <li routerLinkActive="active" routerLink="/order" [skipLocationChange]="skipLocationChange">{{langService.langKey.orderList | translate:langService.lang}}</li>
-    <li routerLinkActive="active" routerLink="/test" [skipLocationChange]="skipLocationChange">{{langService.langKey.test | translate:langService.lang}}</li>
-    <li (click)="onLogOut()">{{langService.langKey.logout | translate:langService.lang}}</li>
-  </ul>
+<nav>
+    <ul class="nav-ul">
+        <li [ngClass]="{'active-menu': activeLink === PATH.home}"
+            (click)="onNavigate(PATH.home)">{{langService.langKey.home | translate:langService.lang}}</li>
+        <li [ngClass]="{'active-menu': activeLink === PATH.product}"
+            (click)="onNavigate(PATH.product)">{{langService.langKey.productList | translate:langService.lang}}</li>
+        <li [ngClass]="{'active-menu': activeLink === PATH.order}"
+            (click)="onNavigate(PATH.order)">{{langService.langKey.orderList | translate:langService.lang}}</li>
+        <li (click)="onNavigate(PATH.test)">{{langService.langKey.test | translate:langService.lang}}</li>
+        <li (click)="onLogOut()">{{langService.langKey.logout | translate:langService.lang}}</li>
+    </ul>
 </nav>
